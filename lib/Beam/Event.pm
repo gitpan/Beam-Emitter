@@ -1,6 +1,6 @@
 package Beam::Event;
 {
-  $Beam::Event::VERSION = '0.001';
+  $Beam::Event::VERSION = '0.002';
 }
 
 use strict;

@@ -1,6 +1,6 @@
 package Beam::Emitter;
 {
-  $Beam::Emitter::VERSION = '0.001';
+  $Beam::Emitter::VERSION = '0.002';
 }
 
 use strict;
@@ -18,19 +18,13 @@ has _listeners => (
     default => sub { {} },
 );
 
-sub on {
-    goto &subscribe;
-}
-
 sub subscribe {
     my ( $self, $name, $sub ) = @_;
     push @{ $self->_listeners->{$name} }, $sub;
     return;
 }
 
-sub un {
-    goto &unsubscribe;
-}
+*on = \&subscribe;
 
 sub unsubscribe {
     my ( $self, $name, $sub ) = @_;
@@ -48,6 +42,8 @@ sub unsubscribe {
     }
     return;
 }
+
+*un = \&unsubscribe;
 
 sub emit {
     my ( $self, $name, %args ) = @_;

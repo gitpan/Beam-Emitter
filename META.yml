@@ -19,4 +19,8 @@ name: Beam-Emitter
 requires:
   Moo: 0
   MooX::Types::MooseLike: 0
-version: 0.001
+resources:
+  bugtracker: https://github.com/preaction/Beam-Emitter/issues
+  homepage: https://github.com/preaction/Beam-Emitter
+  repository: https://github.com/preaction/Beam-Emitter.git
+version: 0.002
