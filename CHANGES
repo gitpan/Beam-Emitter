@@ -1,59 +1,26 @@
-==================================================
-Changes from 2012-04-18 00:00:00 +0000 to present.
-==================================================
+Changelog for Beam-Emitter
 
-------------------------------------------
-version 0.002 at 2013-04-18 01:08:43 +0000
-------------------------------------------
+0.003 2014-11-16T01:42:19
+ - allow cpanfile to be dirty
+ - add new build artifacts
+ - fix dist.ini after copying from Beam-Wire
+ - interleave and update documentation for weaving
+ - clarify which method uses Beam::Event
+ - add more missing dependencies
+ - switch to Type::Tiny
+ - add missing Test::More dependency
+ - update dist.ini and add travis-ci
+ - add emit_args to give args directly to listeners
+ - update weaver.ini from new default skeleton
+ - add Build.PL to the base repo
+ - SurgicalPodWeaver -> PodWeaver
 
-  Change: 60071421bcb55709fbe83f2752725d5051e83037
-  Author: Doug Bell <madcityzen@gmail.com>
-  Date : 2013-04-17 20:08:23 +0000
+0.002 2013-04-18T01:08:23
+ - update dist details to be higher kwalitee
+ - Update lib/Beam/Emitter.pm
 
-    update dist details to be higher kwalitee 
+0.001 2013-02-15T07:47:31
+ - add README for github
+ - add dist directories to gitignore
+ - basic event class and emitter role
 
-  Change: de6e590db40eff716250782afc9e1797ad68783c
-  Author: Doug Bell <madcityzen@gmail.com>
-  Date : 2013-02-15 13:15:52 +0000
-
-    Merge pull request #1 from jberger/patch-1
-
-    Faster and more semantically correct aliasing of on/un 
-
-  Change: 70eff5f5bc3112cc0ed93d068063e498de273aa7
-  Author: Joel Berger <joel.a.berger@gmail.com>
-  Date : 2013-02-15 07:51:08 +0000
-
-    Update lib/Beam/Emitter.pm
-
-    Faster and more semantically correct aliasing of on/un.
-
-    While `goto &sub` is fun, it adds one more layer of indirection.
-    Unless you need to choose what method to delegate to at runtime, a
-    direct (typeglob) alias should be faster. 
-
-------------------------------------------
-version 0.001 at 2013-02-15 07:47:31 +0000
-------------------------------------------
-
-  Change: 9efbb6ae2a93cef6d69168cc498a53df20799ad7
-  Author: Doug Bell <madcityzen@gmail.com>
-  Date : 2013-02-15 01:47:31 +0000
-
-    add README for github 
-
-  Change: b32d1852cbc12001cc7e0663d3b9cfed8a951531
-  Author: Doug Bell <madcityzen@gmail.com>
-  Date : 2013-02-15 01:47:18 +0000
-
-    add dist directories to gitignore 
-
-  Change: 13d83e8dbaab9b74288e6df6fc43e358d000755b
-  Author: Doug Bell <madcityzen@gmail.com>
-  Date : 2013-02-15 01:39:22 +0000
-
-    basic event class and emitter role 
-
-================
-End of releases.
-================
