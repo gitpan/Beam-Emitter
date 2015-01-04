@@ -25,10 +25,11 @@ requires:
   strict: '0'
   warnings: '0'
 resources:
+  IRC: irc://irc.perl.org/#beam
   bugtracker: https://github.com/preaction/Beam-Emitter/issues
   homepage: https://github.com/preaction/Beam-Emitter
   repository: https://github.com/preaction/Beam-Emitter.git
-version: '0.004'
+version: '0.005'
 x_authority: cpan:PREACTION
 x_contributors:
   - 'Joel Berger <joel.a.berger@gmail.com>'
