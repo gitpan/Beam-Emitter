@@ -1,6 +1,6 @@
 package Beam::Emitter;
 # ABSTRACT: Role for event emitting classes
-$Beam::Emitter::VERSION = '0.006';
+$Beam::Emitter::VERSION = '0.007';
 use strict;
 use warnings;
 
@@ -83,7 +83,7 @@ Beam::Emitter - Role for event emitting classes
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =head1 SYNOPSIS
 
@@ -168,8 +168,9 @@ open opens after noon (to keep us from having to wake up in the morning).
 
     $restful_door->open;
 
-By calling L<Beam::Event/stop_default>, we set the L<Beam::Event/is_default_stopped>
-flag, which the door sees and decides not to open.
+By calling L<stop_default|Beam::Event/stop_default>, we set the
+L<is_default_stopped|Beam::Event/is_default_stopped> flag, which the door sees
+and decides not to open.
 
 =head2 Using Custom Events
 
@@ -233,7 +234,7 @@ instead of L<emit> to give arbitrary arguments to your listeners.
 
     sub open {
         my ( $self, $who ) = @_;
-        my $event = $self->emit_args( 'open', $who );
+        $self->emit_args( 'open', $who );
         $self->open_the_door;
     }
 
@@ -290,6 +291,8 @@ features like L<stop|Beam::Event/stop> and L<stop default|Beam::Event/stop_defau
 =item L<Beam::Event>
 
 =item L<http://perladvent.org/2013/2013-12-16.html>
+
+Coordinating Christmas Dinner with Beam::Emitter by Yanick Champoux.
 
 =back
 
