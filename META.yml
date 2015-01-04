@@ -21,12 +21,14 @@ requires:
   Carp: '0'
   Moo: '0'
   Scalar::Util: '0'
-  Types::Standard: '0'
+  Types::Standard: '0.008'
   strict: '0'
   warnings: '0'
 resources:
   bugtracker: https://github.com/preaction/Beam-Emitter/issues
   homepage: https://github.com/preaction/Beam-Emitter
   repository: https://github.com/preaction/Beam-Emitter.git
-version: '0.003'
+version: '0.004'
 x_authority: cpan:PREACTION
+x_contributors:
+  - 'Joel Berger <joel.a.berger@gmail.com>'

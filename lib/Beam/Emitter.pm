@@ -1,6 +1,6 @@
 package Beam::Emitter;
 # ABSTRACT: Role for event emitting classes
-$Beam::Emitter::VERSION = '0.003';
+$Beam::Emitter::VERSION = '0.004';
 use strict;
 use warnings;
 
@@ -83,7 +83,7 @@ Beam::Emitter - Role for event emitting classes
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 
@@ -157,7 +157,7 @@ Doug Bell <preaction@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Doug Bell.
+This software is copyright (c) 2015 by Doug Bell.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
