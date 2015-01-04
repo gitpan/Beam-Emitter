@@ -1,6 +1,6 @@
 package Beam::Emitter;
 # ABSTRACT: Role for event emitting classes
-$Beam::Emitter::VERSION = '0.005';
+$Beam::Emitter::VERSION = '0.006';
 use strict;
 use warnings;
 
@@ -83,7 +83,7 @@ Beam::Emitter - Role for event emitting classes
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 SYNOPSIS
 
@@ -282,6 +282,16 @@ directly to each subscribed callback.
 
 Use this if you want to avoid using L<Beam::Event>, though you miss out on the control
 features like L<stop|Beam::Event/stop> and L<stop default|Beam::Event/stop_default>.
+
+=head1 SEE ALSO
+
+=over 4
+
+=item L<Beam::Event>
+
+=item L<http://perladvent.org/2013/2013-12-16.html>
+
+=back
 
 =head1 AUTHOR
 

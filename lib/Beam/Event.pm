@@ -1,6 +1,6 @@
 package Beam::Event;
 # ABSTRACT: Base Event class
-$Beam::Event::VERSION = '0.005';
+$Beam::Event::VERSION = '0.006';
 use strict;
 use warnings;
 
@@ -60,7 +60,7 @@ Beam::Event - Base Event class
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 SYNOPSIS
 
@@ -85,7 +85,7 @@ to add data attributes.
 
 =head2 name
 
-The name of the event. This is the string that is given to C<Beam::Emitter::on>.
+The name of the event. This is the string that is given to L<Beam::Emitter/on>.
 
 =head2 emitter
 
@@ -95,14 +95,14 @@ The emitter of this event. This is the object that created the event.
 
 This is true if anyone called L</stop_default> on this event.
 
-Your L<Beam::Emitter|emitter> should check this attribute before trying to do
+Your L<emitter|Beam::Emitter> should check this attribute before trying to do
 what the event was notifying about.
 
 =head2 is_stopped
 
 This is true if anyone called L</stop> on this event.
 
-When using L<Beam::Emitter/emit|the emit method>, this is checked automatically
+When using L<the emit method|Beam::Emitter/emit>, this is checked automatically
 after every callback, and event processing is stopped if this is true.
 
 =head1 METHODS
@@ -118,6 +118,14 @@ behavior to work.
 
 Calling this will immediately stop any further processing of this event.
 Also calls L</stop_default>.
+
+=head1 SEE ALSO
+
+=over 4
+
+=item L<Beam::Emitter>
+
+=back
 
 =head1 AUTHOR
 
